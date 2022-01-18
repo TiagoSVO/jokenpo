@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Jokenpo!</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header id="jkp-header">
+      <h1>Jokenpo! Game</h1>
+    </header>
+    <main id="jkp-main">
+      <article id="jkp-wrap">
+        <section id="jkp-controls">
+          <button type="button" id="jkp-start" class="jkp-btn jkp-btn-primary">Start</button>
+          <div id="jkp-timer">00:00<div>
+        </section>
+        <section id="jkp-game-field">
+          <section id="jkp-field-player" class="jkp-field">
+            <h3 id="jkp-player-name" class="jkp-field-name">Player 1</h3>
+            <span id="jkp-player-points" class="jkp-field-points">0</span>
+            <ul id="jkp-player-choices" class="jkp-field-choices">
+              <li><a id="jkp-player-choice-1" value="1">s</a></li>
+              <li><a id="jkp-player-choice-2" value="2">b</a></li>
+              <li><a id="jkp-player-choice-3" value="3">v</a></li>
+            </ul>
+          </section>
+          <section class="jkp-vs">
+            <span>VS</span>
+          </section>
+          <section id="jkp-field-computer" class="jkp-field">
+            <h3 id="jkp-computer-name" class="jkp-field-name">Computer</h3>
+            <span id="jkp-computer-points" class="jkp-field-points">0</span>
+            <ul id="jkp-computer-choices" class="jkp-field-choices">
+              <li><a id="jkp-computer-choice-1">s</a></li>
+              <li><a id="jkp-computer-choice-2">b</a></li>
+              <li><a id="jkp-computer-choice-3">v</a></li>
+            </ul>
+          </section>
+        </section>
+        <section id="jkp-messages">
+          <span>Click star to play the game!</span>
+        </section>
+      </article>
+    </main>
+    <footer id="jkp-footer">
+      <p>Developed by <strong>tiago.svo.dev</strong></p>
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,235 @@
+@font-face {
+    font-family: 'Console';
+    src: url('fonts/console/Console.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url('fonts/roboto/Roboto-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Balonku-Regular';
+    src: url('fonts/balonku/Balonku-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Fingerspelling';
+    src: url('fonts/fingerspelling/Fingerspelling.ttf');
+}
+
+body {
+  font-family: Roboto-Medium;
+  margin: 0;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows:
+    100px
+    1fr
+    50px;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  height: 100vh;
+  text-align: center;
+
+}
+
+#jkp-header, #jkp-main, #jkp-footer {
+  max-width: 960px;
+  margin: 0  auto;
+}
+
+#jkp-header {
+  grid-area: header;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 0px 0px 10px #ccc;
+}
+
+#jkp-header h1 {
+  font-family: Balonku-Regular, 'sans-serif';
+  font-size: 4em;
+  color: #333;
+}
+
+#jkp-main {
+  grid-area: main;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin:10px auto;
+  width: 100%;
+}
+
+  #jkp-wrap {
+    border: 1px solid #ccc;
+    background-color:  #fff;
+    box-shadow:  inset 0px 0px 2em 1em #ccc;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "controls"
+    "gamefield"
+    "messages"
+    ;
+  }
+
+    #jkp-controls {
+      grid-area: controls;
+      width: 100%;
+      border-bottom: 1px solid #ccc;
+      min-height: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #jkp-game-field {
+      grid-area: gamefield;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .jkp-field {
+      width: 45%;
+    }
+
+    .jkp-vs {
+      width: 7%;
+      text-align: center;
+      font-size: 2em;
+      text-shadow: 0 0 10px #333;
+      font-family: Balonku-Regular;
+    }
+
+      .jkp-field-name {
+        margin: 10px auto;
+      }
+
+      .jkp-field-points {
+        font-size: 3em;
+        text-shadow: 0 0 10px #333;
+        font-family: Balonku-Regular;
+        line-height: 1;
+      }
+
+      .jkp-field-choices {
+        list-style: none;
+        display: flex;
+        background-color: #CCC;
+        margin: 10px;
+        border-radius: 3px;
+        border: 1px solid #777;
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+        transition: .3s;
+      }
+
+      .jkp-field-choices.visible {
+        visibility: visible;
+        transition: .3s;
+      }
+
+      .jkp-field-choices li {
+        width: 30%;
+        align-items: center;
+        justify-content: center;
+        font-family: Fingerspelling;
+        font-size: 10em;
+        opacity: 0.5;
+        text-shadow: 0 0 0 #333;
+        transition: 0.3s;
+        cursor: default;
+      }
+
+      .jkp-field-choices.enable li {
+        cursor: pointer;
+      }
+
+      .jkp-field-choices.enable li:hover,
+      .jkp-field-choices li.selected {
+        opacity: 1;
+        text-shadow: 0 0 10px #333;
+        transition: 0.3s;
+      }
+
+    #jkp-messages {
+      grid-area: messages;
+      background-color: #333;
+      color: #fff;
+      margin: 10px auto;
+      padding: 5px;
+      width: 80%;
+      min-height: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 3px;
+    }
+
+.jkp-btn {
+  border: 1px solid #777;
+  border-radius: 3px;
+  background-color: #eee;
+  color: #777;
+  padding: 5px;
+  cursor: pointer;
+}
+
+  .jkp-btn-primary {
+    text-transform: uppercase;
+    color: #fff;
+    background: #333;
+    font-weight: bold;
+  }
+
+    #jkp-start {
+      margin: 20px auto;
+      min-width: 3em;
+      min-height: 3em;
+      line-height: 1;
+      text-align: center;
+      border: 0.3em solid #fff;
+      border-radius: 50%;
+      box-sizing: content-box;
+      box-shadow: 0px 0px 0px 0.7em #333, 0px 0px 2em 1em #777;
+      font-size: 1em;
+      transition: 0.3s;
+    }
+
+    #jkp-start:hover {
+      border: 0.3em solid #fff;
+      border-radius: 50%;
+      box-sizing: content-box;
+      box-shadow: 0px 0px 0px 0.7em #333, 0px 0px 2.3em 1.3em #ccc;
+      transition: 0.3s;
+    }
+
+    #jkp-start:active {
+      font-size: 0.9em;
+      border: 0.3em solid #fff;
+      border-radius: 50%;
+      box-sizing: content-box;
+      box-shadow: 0px 0px 0px 0.7em #333, 0px 0px 2.3em 1.3em #777;
+      transition: 0.3s;
+    }
+
+#jkp-footer {
+  grid-area: footer;
+  border-top: 1px solid #ccc;
+  color: #777;
+  width: 100%;
+}
